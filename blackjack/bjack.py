@@ -1,4 +1,5 @@
 import random
+from art import logo
 
 
 def deal_card():
@@ -19,6 +20,7 @@ play = True
 
 start = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
 if start == "y":
+    print(logo)
     player.append(deal_card())
     player.append(deal_card())
     computer.append(deal_card())
