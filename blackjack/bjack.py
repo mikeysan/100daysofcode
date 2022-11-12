@@ -33,9 +33,9 @@ else:
 
 while play:
     if score > 21:
+        computer_score = sum(computer)
         print(f"Your final hand: {player}, final score: {score}")
-        print(f"Computer's final hand: {computer}, final score: {score}")
-        print("Dealer wins!")
+        print(f"Computer's final hand: {computer}, final score: {computer_score}")
         play = False
     else:
         deal = input("Type 'y' to get another card, type 'n' to pass: ")
