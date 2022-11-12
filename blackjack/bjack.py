@@ -17,20 +17,27 @@ computer = []
 play = True
 
 
+start = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+if start == "y":
+    player.append(deal_card())
+    player.append(deal_card())
+    computer.append(deal_card())
+    computer.append(deal_card())
+    score = player[0] + player[1]
+    print(f"Your cards: {player}, current score: {score}")
+    print(f"Computer's first card: {computer[0]}")
+else:
+    print("Maybe you will play later. Bye!")
+
 while play:
-    start = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
-    player.append(deal_card())
-    player.append(deal_card())
-    computer.append(deal_card())
-    computer.append(deal_card())
-    print(player)
-    print(computer[0])
-    deal = print("Type 'y' to get another card, type 'n' to pass: ")
+    deal = input("Type 'y' to get another card, type 'n' to pass: ")
     if deal == "n":
-        print(player)
+        print(f"Your cards: {player}, final score: {score}")
         print(computer)
         computer_score = computer[0] + computer[1]
         player_score = player[0] + player[1]
+        print(f"Your final hand: {player}, final score: {player_score}")
+        print(f"Computer's final hand: {computer}, final score: {computer_score}")
         if player_score < computer_score:
             print("Dealer wins!")
         elif player_score == computer_score:
@@ -41,6 +48,8 @@ while play:
     else:
         player.append(deal_card())
         print(player)
+
+
 
 # player.append(deal_card())
 # computer.append(deal_card())
