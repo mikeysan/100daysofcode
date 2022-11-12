@@ -46,9 +46,8 @@ while play:
             print("Player wins!")
         play = False
     else:
-        player.append(deal_card())
-        print(f"Your cards: {player}, current score: {score}")
+        player.append(deal_card())        
         score = sum(player)
-        print(player)
+        print(f"Your cards: {player}, current score: {score}")
 
 
