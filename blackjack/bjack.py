@@ -23,7 +23,7 @@ if start == "y":
     player.append(deal_card())
     computer.append(deal_card())
     computer.append(deal_card())
-    score = player[0] + player[1]
+    score = sum(player)
     print(f"Your cards: {player}, current score: {score}")
     print(f"Computer's first card: {computer[0]}")
 else:
@@ -34,8 +34,8 @@ while play:
     if deal == "n":
         print(f"Your cards: {player}, final score: {score}")
         print(computer)
-        computer_score = computer[0] + computer[1]
-        player_score = player[0] + player[1]
+        computer_score = sum(computer)
+        player_score = sum(player)
         print(f"Your final hand: {player}, final score: {player_score}")
         print(f"Computer's final hand: {computer}, final score: {computer_score}")
         if player_score < computer_score:
@@ -47,15 +47,8 @@ while play:
         play = False
     else:
         player.append(deal_card())
+        print(f"Your cards: {player}, current score: {score}")
+        score = sum(player)
         print(player)
 
 
-
-# player.append(deal_card())
-# computer.append(deal_card())
-# print(player)
-# print(computer)
-# computer_score = computer[0] + computer[1]
-# print(computer_score)
-# player_score = player[0] + player[1]
-# print(player_score)
