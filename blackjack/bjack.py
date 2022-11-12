@@ -48,6 +48,8 @@ while play:
                 print("Dealer wins!")
             elif player_score == computer_score:
                 print("Draw!")
+            elif player_score == 21 and computer_score ==21:
+                print("Dealer wins!")
             elif player_score > 21:
                 print("Dealer wins!")
             else:
@@ -60,5 +62,3 @@ while play:
                 player.append(deal_card())
                 score = sum(player)
                 print(f"Your cards: {player}, current score: {score}")
-
-
