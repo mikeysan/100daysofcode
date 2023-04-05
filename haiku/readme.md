@@ -19,3 +19,8 @@ You can get an API key by signing up for the OpenAI API at https://openai.com/si
 Once you have your API key, you can run the script and provide a "prompt" to generate a haiku.
 
 The prompt could be something like "Write a Haiku about fish".
+
+##### On Windows 
+
+Open a terminal and type `python haikuai.py "Write a haiku about the ocean."`
+ 
