@@ -22,5 +22,5 @@ The prompt could be something like "Write a Haiku about fish".
 
 ##### On Windows 
 
-Open a terminal and type `python haikuai.py "Write a haiku about the ocean."`
+Open a terminal and type `python haikuai.py "Write a haiku fish."`
  
