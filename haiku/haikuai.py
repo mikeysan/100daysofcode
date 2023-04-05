@@ -1,5 +1,6 @@
 import openai
 import re
+import sys
 
 openai.api_key = "YOUR_API_KEY"
 
@@ -21,7 +22,12 @@ def generate_haiku(prompt):
 
     return haiku
 
-prompt = "Write a haiku about the ocean."
-haiku = generate_haiku(prompt)
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Please provide a prompt as an argument.")
+        sys.exit(1)
 
-print(haiku)
+    prompt = sys.argv[1]
+    haiku = generate_haiku(prompt)
+
+    print(haiku)
